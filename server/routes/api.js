@@ -1,23 +1,23 @@
 /* eslint-disable no-console */
-var express = require('express')
-var router = express.Router()
+const express = require('express');
+const router = express.Router();
 
 // middleware that is specific to this router
-router.use(function timeLog (req, res, next) {
-	console.log('Time: ', Date.now())
-	next()
-})
+router.use((req, res, next) => {
+    console.log('Time: ', Date.now());
+    next();
+});
 // define the home page route
-router.get('/', function (req, res) {
- 	 res.send('Birds home page')
-})
+router.get('/', (req, res) => {
+    res.send('Birds home page');
+});
 // define the about route
-router.get('/about', function (req, res) {
-  	res.json({})
-})
+router.get('/about', (req, res) => {
+    res.json({});
+});
 
-router.get('/api/test', function (req, res) {
-    res.json({})
-})
+router.get('/api/test', (req, res) => {
+    res.json({});
+});
 
-module.exports = router
+module.exports = router;
