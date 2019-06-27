@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const api = require('./routes/api');
-const db = require('./config/db');
+const config = require('./config');
 const mongoose = require('mongoose');
 const server = require('http').createServer(app)
 const io = require('socket.io')(server);
@@ -17,18 +17,22 @@ app.use('/api', api);
 
 app.use(express.static(publicPath));
 
-mongoose.connect(db.url, { useNewUrlParser: true }).then(
-    () => { console.log('Mongoose connected') },
-    (err) => { console.log('Mongoose error') }
-);
+mongoose.connect(config.DATABASE, { useNewUrlParser: true })
+    .then(() => { 
+        console.log('Mongoose connected');
+        server.listen(PORT, () => console.log(`App running on port ${PORT}!`));
+    }).catch((err)  => {
+        console.log(err);
+    });
+
 
 io.on('connection', (client) => {
     client.on('test_event', (data) => {
         console.log(data);
         client.emit('test_event', {
             message: 'hi from server'
-        })
+        });
     })
 })
 
-server.listen(PORT, () => console.log(`App running on port ${PORT}!`));
+
