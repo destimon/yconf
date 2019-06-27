@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const server = require('http').createServer(app)
 const io = require('socket.io')(server);
 
-const PORT = 3000;
+const PORT = config.PORT;
 
 const publicPath = path.resolve(__dirname, '../../dist');
 
