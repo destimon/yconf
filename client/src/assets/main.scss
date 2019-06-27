@@ -1,0 +1,15 @@
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #0000;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.yc-ul {
+    list-style-type: none;
+    .yc-li {
+        font-weight: 500;
+    }
+}
