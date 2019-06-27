@@ -15,6 +15,9 @@ app.use('/api', api);
 
 app.use(express.static(publicPath));
 
-mongoose.connect(db.url, { useNewUrlParser: true }, () => { console.log('Mongoose connected') });
+mongoose.connect(db.url, { useNewUrlParser: true }).then(
+    () => { console.log('Mongoose connected') },
+    (err) => { console.log('Mongoose error') }
+);
 
 app.listen(PORT, () => console.log(`App running on port ${PORT}!`));
