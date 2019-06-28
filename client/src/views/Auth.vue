@@ -1,6 +1,12 @@
 <template>
-    <div class="yc-background-auth">
-        <c-auth-bar/>
+    <div class="yc-auth-background">
+        <v-layout row class="yc-auth-container">
+
+            <c-auth-bar/>
+                <v-container>
+                    <h1>Big content</h1>
+                </v-container>
+        </v-layout>
     </div>
 </template>
 
@@ -16,13 +22,27 @@ export default {
 
 <style lang="scss">
 
-.yc-background-auth {
+.yc-auth-background {
     background-image: url('https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     height: 100%;
+
+    position: static;
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    .yc-auth-container {
+        height: 100%;
+        .yc-left-bar {
+
+        }
+
+        .yc-content {
+
+        }
+    }
+
 }
 
 </style>

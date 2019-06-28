@@ -7,11 +7,15 @@
         </div>
 
         <div class="yc-auth-bar-content">
-
+            <v-container>
+                <h2>Content</h2>
+            </v-container>
         </div>
 
         <div class="yc-auth-bar-form">
-
+            <v-container>
+                <h2>Button</h2>
+            </v-container>
         </div>
     </div>
 </template>
@@ -39,7 +43,9 @@ export default {
     }
 
     .yc-auth-bar-form {
-
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 3%;
     }
 }
 
