@@ -3,6 +3,7 @@ import Router from 'vue-router';
 // import HelloWorld from '@/components/HelloWorld';
 import Home from '@/views/Home';
 import Test from '@/views/Test';
+import Auth from '@/views/Auth';
 
 Vue.use(Router);
 
@@ -19,6 +20,11 @@ export default new Router({
             path: '/test',
             name: 'test',
             component: Test
+        },
+        {
+            path: '/auth',
+            name: 'auth',
+            component: Auth
         }
     ]
 });
