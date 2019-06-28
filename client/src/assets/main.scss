@@ -3,13 +3,40 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: #0000;
 
 body {
-  font: 100% $font-stack;
-  color: $primary-color;
+	font: 100% $font-stack;
+	color: $primary-color;
 }
 
-.yc-ul {
+.yc-list {
     list-style-type: none;
-    .yc-li {
-        font-weight: 500;
+	.yc-list-el {
+		cursor: pointer;
+		color: black;
+
+		margin-top: 10%;
+		margin-bottom: 10%;
+
+		font-size: 200%;
+		&:hover {
+			text-decoration: underline red;
+		}
+
+		.yc-paragraph {
+			width: 0; 
+			height: 0; 
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			
+			border-left: 15px solid red;
+
+			position: relative;
+			top: 10px;
+		}
+		
+		.yc-paragraph-info {
+			position: relative;
+			left: 5%;
+		}
     }
 }
+
