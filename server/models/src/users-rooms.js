@@ -5,4 +5,4 @@ const UsersRoomsSchema = new mongoose.Schema({
     roomId: { type: mongoose.Schema.Types.ObjectId, ref: 'Room' }
 });
 
-module.exports = mongoose.Model('Users-Rooms', UsersRoomsSchema);
+module.exports = mongoose.model('Users-Rooms', UsersRoomsSchema);
