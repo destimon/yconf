@@ -22,5 +22,6 @@ router.get('/api/test', (req, res) => {
 
 
 router.use('/rooms', require('./room').router);
+router.use('/users', require('./user').router);
 
 module.exports = router;
