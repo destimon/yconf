@@ -10,7 +10,7 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
-const api = require('./routes/api');
+const api = require('./routes').api;
 const config = require('./config');
 
 const PORT = config.PORT;
@@ -27,6 +27,9 @@ app.use(cors()); // allow us made api requests from a different domain
 app.use(passport.initialize());
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use('/api', api);
 
 app.use(express.static(publicPath));

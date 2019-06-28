@@ -1,5 +1,6 @@
 require('dotenv').config()
 module.exports = {
     PORT: process.env.PORT || 3000,
-    DATABASE: process.env.DATABASE
+    DATABASE: process.env.DATABASE,
+    LIMIT: parseInt(process.env.LIMIT)
 };
