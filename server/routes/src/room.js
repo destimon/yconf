@@ -36,6 +36,7 @@ router.get('/room/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     // TODO verify data 
+    console.log(req.body);
     const obj = {};
     obj.roomName = req.body.roomName;
     obj.creatorId = req.body.creatorId;
