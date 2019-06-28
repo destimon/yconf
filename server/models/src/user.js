@@ -5,4 +5,4 @@ const UserSchema = new mongoose.Schema({
     displayName: { type: String, required: true, unique: false }
 });
 
-module.exports = mongoose.Model('User', UserSchema);
+module.exports = mongoose.model('User', UserSchema);

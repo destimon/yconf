@@ -20,4 +20,7 @@ router.get('/api/test', (req, res) => {
     res.json({});
 });
 
+
+router.use('/rooms', require('./room').router);
+
 module.exports = router;
