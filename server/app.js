@@ -27,6 +27,9 @@ app.use(cors()); // allow us made api requests from a different domain
 app.use(passport.initialize());
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 app.use('/api', api);
 
 app.use(express.static(publicPath));
