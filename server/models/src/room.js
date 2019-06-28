@@ -3,7 +3,7 @@ const paginate = require('mongoose-paginate');
 
 const RoomSchema = new mongoose.Schema({
     roomName: { type: String, required: true, unique: false },
-    creatorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+    creator: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
 });
 
 RoomSchema.plugin(paginate);
