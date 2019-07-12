@@ -1,10 +1,25 @@
 
-$font-stack:    Helvetica, sans-serif;
+$font-stack:    'Roboto', sans-serif;
 $primary-color: #0000;
 
 body {
 	font: 100% $font-stack;
 	color: $primary-color;
+}
+
+.yc-h3 {
+	font-family: 'RobotoLight', sans-serif;
+	font-size: 28px;
+	color: black;
+	text-shadow: 1px 1px 2px gray;
+}
+
+.yc-h2 {
+	font-family: 'RobotoBold', sans-serif;
+	font-size: 32px;
+	letter-spacing: 5px;
+	color: black;
+	text-shadow: 1px 1px 2px black;
 }
 
 .yc-list {
@@ -17,9 +32,6 @@ body {
 		margin-bottom: 10%;
 
 		font-size: 200%;
-		&:hover {
-			text-decoration: underline red;
-		}
 
 		.yc-paragraph {
 			width: 0; 

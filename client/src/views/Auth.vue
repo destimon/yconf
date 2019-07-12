@@ -1,11 +1,10 @@
 <template>
     <div class="yc-auth-background">
         <v-layout row class="yc-auth-container">
-
             <c-auth-bar/>
-                <v-container>
-                    <h1>Big content</h1>
-                </v-container>
+            <v-container>
+                
+            </v-container>
         </v-layout>
     </div>
 </template>
